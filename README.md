@@ -6,10 +6,8 @@ This project is a "work in progress". Exploratory Data Analysis, XGBoost (with r
 
 From the link https://sebastianraschka.com/blog/2022/deep-learning-for-tabular-data.html, consider trying the following:
 
-1. Use TabPFN for another model. Since the model ensembles multiple input encodings by default, try to tune the **N_ensemble_configurations** parameter. Might make more sense to use Sage-Maker or Google Colab for hyper-parameter tuning with 5-fold CV.
+1. Use TabPFN or TabTransformer for another model type. Leverage SageMaker or Google Colab for hyperparameter tuning. Save probabilities for validation (for ensemble use) and test sets.
 
-2. Use XBNet for another model.
+2. Instead of randomly oversampling, try using GReaT (Generation of Realistic Tabular data) to synthetically create the minority class's training data for all models used.
 
-3. Instead of randomly oversampling, try using GReaT (Generation of Realistic Tabular data) to synthetically create the minority class's training data for all models used.
-
-4. Create ensembles using logistic regression or average of multiple predicted probabilities (maybe an additional simple model like SVM or something).
+3. Create ensembles using logistic regression or average of multiple predicted probabilities (maybe an additional simple model like SVM or something).
